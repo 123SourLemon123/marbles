@@ -39,6 +39,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, computed } from 'vue'
+import { price } from '@/config'
 
 export default defineComponent({
   props: {
@@ -64,7 +65,7 @@ export default defineComponent({
       return `игр${end}`
     })
 
-    const costPerItem = 3900
+    const costPerItem = price
     const costTotal = computed(() =>
       (costPerItem * quantity.value).toLocaleString('ru'))
 

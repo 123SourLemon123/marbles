@@ -3,8 +3,9 @@ import App from './App.vue'
 
 import VueLazyLoad from 'vue3-lazyload'
 import { dragscrollNext } from 'vue-dragscroll'
+import { assetsPath } from './config'
 
-const loadingImg = `${process.env.VUE_APP_ASSETS}img/loading.svg`
+const loadingImg = `${assetsPath}img/loading.svg`
 
 createApp(App)
   .use(VueLazyLoad, { // https://github.com/murongg/vue3-lazyload#-options

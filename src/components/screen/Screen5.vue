@@ -75,6 +75,7 @@
 <script lang="ts">
 import { defineComponent, ref, onMounted, onUnmounted, computed } from 'vue'
 import { breakpoints } from '../../const.json'
+import { assetsPath } from '@/config'
 
 interface Benefit {
   img: string
@@ -84,8 +85,6 @@ interface Benefit {
 
 export default defineComponent({
   setup () {
-    const assetsPath = process.env.VUE_APP_ASSETS
-
     const benefits: Benefit[] = [
       {
         img: 'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/spirit-quartz-xxl-consign.mov-low_2048x.gif',

@@ -36,6 +36,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { assetsPath } from '@/config'
 
 interface Link {
   href: string
@@ -67,7 +68,7 @@ export default defineComponent({
 
     return {
       publicPath,
-      assetsPath: process.env.VUE_APP_ASSETS,
+      assetsPath,
       links
     }
   }

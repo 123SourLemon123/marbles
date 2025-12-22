@@ -55,13 +55,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import AppExternalLink from '../app/AppExternalLink.vue'
+import { assetsPath } from '@/config'
 
 export default defineComponent({
   components: { AppExternalLink },
 
   setup () {
     return {
-      assetsPath: process.env.VUE_APP_ASSETS,
+      assetsPath,
       tg: 'nikolayr',
       email: 'help@marbls.ru'
     }

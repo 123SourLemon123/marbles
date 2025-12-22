@@ -30,11 +30,10 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { assetsPath } from '@/config'
 
 export default defineComponent({
   setup () {
-    const assetsPath = process.env.VUE_APP_ASSETS
-
     return {
       assetsPath
     }

@@ -68,12 +68,12 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import AppInput from '../app/AppInput.vue'
+import { assetsPath } from '@/config'
 
 export default defineComponent({
   components: { AppInput },
 
   setup () {
-    const assetsPath = process.env.VUE_APP_ASSETS
     const email = ref('')
 
     function onSubmit (): void {

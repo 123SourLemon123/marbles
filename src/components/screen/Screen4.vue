@@ -106,6 +106,7 @@
 import { defineComponent, ref } from 'vue'
 import AppBuy from '../app/AppBuy.vue'
 import AppExternalLink from '../app/AppExternalLink.vue'
+import { assetsPath } from '@/config'
 
 export default defineComponent({
   components: {
@@ -114,8 +115,6 @@ export default defineComponent({
   },
 
   setup () {
-    const assetsPath = process.env.VUE_APP_ASSETS
-
     const images = [
       `${assetsPath}img/photo.jpeg`,
       'https://picsum.photos/600/800',

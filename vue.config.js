@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
 
 const { env } = process
 const publicPath = env.NODE_ENV === 'production' ? env.MB_PUBLIC_PATH : '/'
@@ -16,7 +15,7 @@ module.exports = {
   pluginOptions: { lintStyleOnBuild: true },
 
   css: {
-    extract: false,
+    extract: true,
     loaderOptions: {
       sass: {
         additionalData: `
@@ -30,14 +29,27 @@ module.exports = {
   },
 
   configureWebpack: {
+    externals: {
+      vue: 'Vue',
+      'vue3-lazyload': {
+        root: 'Vue3Lazyload',
+        commonjs: 'vue3-lazyload',
+        commonjs2: 'vue3-lazyload',
+        amd: 'vue3-lazyload'
+      },
+      'vue-dragscroll': {
+        root: 'VueDragscroll',
+        commonjs: 'vue-dragscroll',
+        commonjs2: 'vue-dragscroll',
+        amd: 'vue-dragscroll'
+      }
+    },
     optimization: { splitChunks: false },
     plugins: [
       new HtmlWebpackPlugin({
         filename: 'index.html',
-        template: 'public/index.html',
-        inlineSource: '.(js|css)$'
-      }),
-      new HtmlWebpackInlineSourcePlugin(HtmlWebpackPlugin)
+        template: 'public/index.html'
+      })
     ]
   }
 }

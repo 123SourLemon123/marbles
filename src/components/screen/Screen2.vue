@@ -43,6 +43,7 @@
 <script lang="ts">
 import { defineComponent, ref, computed, onMounted, onUnmounted } from 'vue'
 import { breakpoints } from '../../const.json'
+import { assetsPath } from '@/config'
 
 interface Card {
   img: string
@@ -52,8 +53,6 @@ interface Card {
 
 export default defineComponent({
   setup () {
-    const assetsPath = process.env.VUE_APP_ASSETS
-
     const cards: Card[] = [
       {
         img: 'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/amethyst-shere-xxl.mov-low_2048x.gif',

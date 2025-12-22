@@ -30,13 +30,12 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import AppBuy from '../app/AppBuy.vue'
+import { assetsPath } from '@/config'
 
 export default defineComponent({
   components: { AppBuy },
 
   setup () {
-    const assetsPath = process.env.VUE_APP_ASSETS
-
     return {
       assetsPath
     }

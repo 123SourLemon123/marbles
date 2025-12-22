@@ -101,6 +101,7 @@
 <script lang="ts">
 import { computed, defineComponent, onMounted, onUnmounted, ref } from 'vue'
 import { breakpoints } from '../../const.json'
+import { assetsPath } from '@/config'
 
 interface Review1 {
   img: string
@@ -116,8 +117,6 @@ interface Review2 {
 
 export default defineComponent({
   setup () {
-    const assetsPath = process.env.VUE_APP_ASSETS
-
     const reviews1: Review1[] = [
       {
         img: `${assetsPath}img/photo.jpeg`,
