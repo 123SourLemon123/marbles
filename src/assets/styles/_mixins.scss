@@ -1,0 +1,78 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+// https://getbootstrap.com/docs/5.0/layout/breakpoints/
+@import 'bootstrap/scss/mixins/breakpoints';
+
+/* fonts */
+@mixin font-bold {
+  font-weight: 700;
+}
+
+@mixin font-medium {
+  font-weight: 500;
+}
+
+@mixin p2 {
+  font-size: 12px;
+  line-height: 18px;
+
+  @include media-breakpoint-down(md) {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+/* other */
+@mixin transition {
+  transition: 0.1s ease-out;
+}
+
+@mixin max-width {
+  max-width: map.get($grid-breakpoints, 'xxl') + 40px;
+  margin: 0 auto;
+}
+
+/* common */
+@mixin yellow-btn {
+  background: $yellow;
+  border: none;
+
+  @include font-bold;
+  @include transition;
+
+  &:hover {
+    filter: drop-shadow(0 3px 26px rgba($yellow, 0.33));
+
+    @include media-breakpoint-down(md) {
+      filter: none;
+      background: $yellow-dark;
+    }
+  }
+
+  &:active {
+    background: $yellow-dark;
+  }
+}
+
+@mixin part {
+  position: absolute;
+  width: 598px;
+  height: 135px;
+  object-fit: contain;
+  filter: drop-shadow(-1px 10px 42px rgba(#000, 0.15));
+
+  @include media-breakpoint-down(md) {
+    width: 170px;
+    height: 38px;
+  }
+}
+
+@mixin hide-scrollbar {
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* stylelint-disable-line property-no-unknown */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

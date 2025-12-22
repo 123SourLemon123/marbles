@@ -1,0 +1,107 @@
+@use 'modern-css-reset';
+
+*::selection {
+  background: $yellow-dark;
+  color: $text-main;
+}
+
+:target {
+  scroll-margin-top: 77px; /* stylelint-disable-line property-no-unknown */
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Rubik, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  background: $white;
+  color: $text-main;
+  position: relative;
+
+  @include media-breakpoint-down(md) {
+    font-size: 13px;
+    line-height: 19.5px;
+  }
+}
+
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
+h1 {
+  @include font-bold;
+
+  font-size: 126px;
+  line-height: 149px;
+
+  @include media-breakpoint-down(md) {
+    font-size: 57px;
+    line-height: 68px;
+  }
+}
+
+h2 {
+  @include font-medium;
+
+  font-size: 66px;
+  line-height: 99px;
+
+  @include media-breakpoint-down(md) {
+    font-size: 27px;
+    line-height: 40.5px;
+  }
+}
+
+h3 {
+  @include font-bold;
+
+  font-size: 40px;
+  line-height: 60px;
+
+  @include media-breakpoint-down(md) {
+    font-size: 22px;
+    line-height: 33px;
+  }
+}
+
+h4 {
+  @include font-medium;
+
+  font-size: 20px;
+  line-height: 30px;
+
+  @include media-breakpoint-down(md) {
+    font-size: 14.5px;
+    line-height: 22.5px;
+  }
+}
+
+.p1 {
+  font-style: italic;
+}
+
+.p2 {
+  @include p2;
+}
+
+.a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: $yellow;
+  }
+
+  &:active {
+    color: rgba($yellow, 0.5);
+  }
+}
+
+button {
+  cursor: pointer;
+}
