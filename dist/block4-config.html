@@ -3,7 +3,20 @@
 
 <!--
 ═══════════════════════════════════════════════════════════════
-ВАЖНО! Как правильно менять пути:
+💡 РЕКОМЕНДУЕТСЯ: Используйте бесплатный jsDelivr CDN!
+═══════════════════════════════════════════════════════════════
+
+jsDelivr - это бесплатный глобальный CDN для GitHub.
+Медиа будут загружаться БЫСТРО со всего мира!
+
+Формат URL:
+https://cdn.jsdelivr.net/gh/{username}/{repo}@{branch}/dist/
+
+Ваш URL:
+https://cdn.jsdelivr.net/gh/123SourLemon123/marbles@claude/optimize-vue-tilda-SJ5ky/dist/
+
+═══════════════════════════════════════════════════════════════
+КАК МЕНЯТЬ ПУТИ:
 ═══════════════════════════════════════════════════════════════
 
 1. Если хотите изменить БАЗОВЫЙ ПУТЬ КО ВСЕМ ФАЙЛАМ:
@@ -17,55 +30,68 @@
 ═══════════════════════════════════════════════════════════════
 -->
 
-<!-- ПРИМЕР 1: Изменить только цену -->
+<!-- ⭐ РЕКОМЕНДУЕТСЯ: Используйте jsDelivr CDN (быстро и бесплатно!) -->
 <script>
 window.MARBLES_CONFIG = {
-  price: 4500  // Новая цена
+  assetsPath: 'https://cdn.jsdelivr.net/gh/123SourLemon123/marbles@claude/optimize-vue-tilda-SJ5ky/dist/'
 }
 </script>
 
-<!-- ПРИМЕР 2: Изменить базовый путь ко всем ресурсам -->
+<!-- ПРИМЕР 1: Изменить только цену (без изменения CDN) -->
+<!--
+<script>
+window.MARBLES_CONFIG = {
+  price: 4500,  // Новая цена
+  assetsPath: 'https://cdn.jsdelivr.net/gh/123SourLemon123/marbles@claude/optimize-vue-tilda-SJ5ky/dist/'
+}
+</script>
+-->
+
+<!-- ПРИМЕР 2: Использовать версию (v1.0.0) для стабильности -->
+<!--
+<script>
+window.MARBLES_CONFIG = {
+  // Создайте тег: git tag v1.0.0 && git push origin v1.0.0
+  assetsPath: 'https://cdn.jsdelivr.net/gh/123SourLemon123/marbles@v1.0.0/dist/'
+}
+</script>
+-->
+
+<!-- ПРИМЕР 3: Использовать свой CDN или хостинг -->
 <!--
 <script>
 window.MARBLES_CONFIG = {
   assetsPath: 'https://my-cdn.com/marbles/'
-  // Все пути к файлам (photo, gift, cards и т.д.) автоматически перестроятся!
+  // Все пути к файлам автоматически перестроятся!
 }
 </script>
 -->
 
-<!-- ПРИМЕР 3: Заменить конкретные файлы на свои -->
+<!-- ПРИМЕР 4: Заменить конкретные файлы на свои -->
 <!--
 <script>
 window.MARBLES_CONFIG = {
+  assetsPath: 'https://cdn.jsdelivr.net/gh/123SourLemon123/marbles@claude/optimize-vue-tilda-SJ5ky/dist/',
+
   media: {
     // Заменяем фото на своё
     photo: 'https://my-site.com/custom-photo.jpg',
-    
+
     // Заменяем видео на своё
     heroVideo: 'https://my-site.com/custom-video.mp4',
-    heroVideoWebm: 'https://my-site.com/custom-video.webm',
-    
-    // Заменяем иконку подарка
-    gift: 'https://my-site.com/custom-gift.svg'
+    heroVideoWebm: 'https://my-site.com/custom-video.webm'
+
+    // Остальные файлы берутся из assetsPath (jsDelivr CDN)
   }
 }
 </script>
 -->
 
-<!-- ПРИМЕР 4: Комбинированный (цена + базовый путь + конкретные файлы) -->
+<!-- ПРИМЕР 5: Использовать старый домен banq-finance.ru -->
 <!--
 <script>
 window.MARBLES_CONFIG = {
-  price: 4500,
-  assetsPath: 'https://my-cdn.com/marbles/',
-  
-  media: {
-    // Эти файлы берём со стороннего CDN
-    heroVideo: 'https://external-cdn.com/video.mp4',
-    heroVideoWebm: 'https://external-cdn.com/video.webm'
-    // Остальные файлы автоматически возьмутся из assetsPath
-  }
+  assetsPath: 'https://banq-finance.ru/marbls/'
 }
 </script>
 -->
@@ -81,7 +107,7 @@ media: {
   line: 'путь/к/line.svg',
   pattern: 'путь/к/pattern.svg',
   noise: 'путь/к/noise.gif',
-  
+
   // Игра
   box: 'путь/к/box.svg',
   cards: 'путь/к/cards.svg',
@@ -89,7 +115,7 @@ media: {
   cardFront: 'путь/к/card-front.svg',
   cardBack: 'путь/к/card-back.svg',
   ball: 'путь/к/ball.svg',
-  
+
   // Декоративные
   gift: 'путь/к/gift.svg',
   laurel: 'путь/к/laurel.png',
@@ -98,27 +124,36 @@ media: {
   dots: 'путь/к/dots.svg',
   users: 'путь/к/users.svg',
   tick: 'путь/к/tick.svg',
-  
+
   // Фигуры
   shape1: 'путь/к/shape-1.svg',
   shape2: 'путь/к/shape-2.svg',
   shape3: 'путь/к/shape-3.svg',
   shape4: 'путь/к/shape-4.svg',
   shape5: 'путь/к/shape-5.svg',
-  
+
   // Части
   part1: 'путь/к/part-1.svg',
   part2: 'путь/к/part-2.svg',
   part1Yellow: 'путь/к/part-1-yellow.svg',
-  
+
   // Соцсети
   telegram: 'путь/к/telegram.svg',
   email: 'путь/к/email.svg',
-  
+
   // Видео
   heroVideo: 'путь/к/video.mp4',
   heroVideoWebm: 'путь/к/video.webm'
 }
+
+═══════════════════════════════════════════════════════════════
+🚀 ПРОВЕРИТЬ ДОСТУПНОСТЬ ФАЙЛОВ НА jsDelivr CDN:
+═══════════════════════════════════════════════════════════════
+
+Откройте в браузере:
+https://cdn.jsdelivr.net/gh/123SourLemon123/marbles@claude/optimize-vue-tilda-SJ5ky/dist/img/photo.jpeg
+
+Если файл открывается - всё работает! ✅
 
 ═══════════════════════════════════════════════════════════════
 -->
