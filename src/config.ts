@@ -44,6 +44,9 @@ interface MediaPaths {
   // Видео
   heroVideo: string
   heroVideoWebm: string
+
+  // Галерея товаров (GIF анимации)
+  productImages: string[]
 }
 
 interface MarblesConfig {
@@ -112,7 +115,20 @@ const defaultMedia: MediaPaths = {
 
   // Видео
   heroVideo: 'https://cdn.shopify.com/s/files/1/0312/2737/9849/files/HomeHero_20210120.mp4',
-  heroVideoWebm: 'https://cdn.shopify.com/s/files/1/0312/2737/9849/files/HomeHero_20210120.webm'
+  heroVideoWebm: 'https://cdn.shopify.com/s/files/1/0312/2737/9849/files/HomeHero_20210120.webm',
+
+  // Галерея товаров (GIF анимации камней/минералов)
+  productImages: [
+    'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/amethyst-shere-xxl.mov-low_2048x.gif',
+    'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/black-obsidian-sphere-xxl.mov-low_2048x.gif',
+    'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/Hnet-image_4_68320e8f-bf73-4701-a0a0-1fefb87a45d0_2048x.gif',
+    'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/spirit-quartz-xxl-consign.mov-low_2048x.gif',
+    'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/Hnet-image_7_82a06331-8999-4f67-bcdc-d60074c92eb5_2048x.gif',
+    'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/small-museum-fluorite-.mov-low_2048x.gif',
+    'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/onyx-sphere-xxl.mov-low_2048x.gif',
+    'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/Hnet-image_9_db151902-968d-4368-9365-d16be794914d_2048x.gif',
+    'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/Hnet.com-image_16_400x.gif'
+  ]
 }
 
 const defaultConfig: MarblesConfig = {
