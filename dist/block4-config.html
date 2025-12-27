@@ -1,0 +1,124 @@
+<!-- БЛОК 4 (ОПЦИОНАЛЬНО): Конфигурация - вставьте в T123 блок Tilda -->
+<!-- Используйте этот блок для изменения цены, путей к ресурсам и медиа-файлам БЕЗ пересборки -->
+
+<!--
+═══════════════════════════════════════════════════════════════
+ВАЖНО! Как правильно менять пути:
+═══════════════════════════════════════════════════════════════
+
+1. Если хотите изменить БАЗОВЫЙ ПУТЬ КО ВСЕМ ФАЙЛАМ:
+   → Измените только assetsPath
+   → Все остальные пути перестроятся автоматически!
+
+2. Если хотите заменить КОНКРЕТНЫЙ файл на свой:
+   → Укажите ПОЛНЫЙ путь к вашему файлу в media.ИМЯ_ФАЙЛА
+   → Не дублируйте assetsPath в каждом пути!
+
+═══════════════════════════════════════════════════════════════
+-->
+
+<!-- ПРИМЕР 1: Изменить только цену -->
+<script>
+window.MARBLES_CONFIG = {
+  price: 4500  // Новая цена
+}
+</script>
+
+<!-- ПРИМЕР 2: Изменить базовый путь ко всем ресурсам -->
+<!--
+<script>
+window.MARBLES_CONFIG = {
+  assetsPath: 'https://my-cdn.com/marbles/'
+  // Все пути к файлам (photo, gift, cards и т.д.) автоматически перестроятся!
+}
+</script>
+-->
+
+<!-- ПРИМЕР 3: Заменить конкретные файлы на свои -->
+<!--
+<script>
+window.MARBLES_CONFIG = {
+  media: {
+    // Заменяем фото на своё
+    photo: 'https://my-site.com/custom-photo.jpg',
+    
+    // Заменяем видео на своё
+    heroVideo: 'https://my-site.com/custom-video.mp4',
+    heroVideoWebm: 'https://my-site.com/custom-video.webm',
+    
+    // Заменяем иконку подарка
+    gift: 'https://my-site.com/custom-gift.svg'
+  }
+}
+</script>
+-->
+
+<!-- ПРИМЕР 4: Комбинированный (цена + базовый путь + конкретные файлы) -->
+<!--
+<script>
+window.MARBLES_CONFIG = {
+  price: 4500,
+  assetsPath: 'https://my-cdn.com/marbles/',
+  
+  media: {
+    // Эти файлы берём со стороннего CDN
+    heroVideo: 'https://external-cdn.com/video.mp4',
+    heroVideoWebm: 'https://external-cdn.com/video.webm'
+    // Остальные файлы автоматически возьмутся из assetsPath
+  }
+}
+</script>
+-->
+
+<!--
+═══════════════════════════════════════════════════════════════
+ПОЛНЫЙ СПИСОК ДОСТУПНЫХ МЕДИА-ФАЙЛОВ:
+═══════════════════════════════════════════════════════════════
+
+media: {
+  // Общие
+  photo: 'путь/к/photo.jpeg',
+  line: 'путь/к/line.svg',
+  pattern: 'путь/к/pattern.svg',
+  noise: 'путь/к/noise.gif',
+  
+  // Игра
+  box: 'путь/к/box.svg',
+  cards: 'путь/к/cards.svg',
+  cardsPng: 'путь/к/cards.png',
+  cardFront: 'путь/к/card-front.svg',
+  cardBack: 'путь/к/card-back.svg',
+  ball: 'путь/к/ball.svg',
+  
+  // Декоративные
+  gift: 'путь/к/gift.svg',
+  laurel: 'путь/к/laurel.png',
+  quote: 'путь/к/quote.svg',
+  star: 'путь/к/star.svg',
+  dots: 'путь/к/dots.svg',
+  users: 'путь/к/users.svg',
+  tick: 'путь/к/tick.svg',
+  
+  // Фигуры
+  shape1: 'путь/к/shape-1.svg',
+  shape2: 'путь/к/shape-2.svg',
+  shape3: 'путь/к/shape-3.svg',
+  shape4: 'путь/к/shape-4.svg',
+  shape5: 'путь/к/shape-5.svg',
+  
+  // Части
+  part1: 'путь/к/part-1.svg',
+  part2: 'путь/к/part-2.svg',
+  part1Yellow: 'путь/к/part-1-yellow.svg',
+  
+  // Соцсети
+  telegram: 'путь/к/telegram.svg',
+  email: 'путь/к/email.svg',
+  
+  // Видео
+  heroVideo: 'путь/к/video.mp4',
+  heroVideoWebm: 'путь/к/video.webm'
+}
+
+═══════════════════════════════════════════════════════════════
+-->
