@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- By Sam Herbert (@sherb), for everyone. More @ http://goo.gl/7AJzbL -->
+
+<svg
+   width="38"
+   height="38"
+   viewBox="0 0 100 100"
+   stroke="#666666"
+   version="1.1"
+   id="svg47"
+   sodipodi:docname="loading.svg"
+   inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs51" />
+  <sodipodi:namedview
+     id="namedview49"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     width="100px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:snap-page="false"
+     inkscape:zoom="4.0921053"
+     inkscape:cx="-6.2315112"
+     inkscape:cy="25.170418"
+     inkscape:window-width="1440"
+     inkscape:window-height="879"
+     inkscape:window-x="0"
+     inkscape:window-y="21"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g43" />
+  <g
+     fill="none"
+     fill-rule="evenodd"
+     id="g45"
+     transform="translate(31,31)">
+    <g
+       transform="translate(1,1)"
+       stroke-width="2"
+       id="g43">
+      <circle
+         stroke-opacity="0.5"
+         cx="18"
+         cy="18"
+         r="18"
+         id="circle39" />
+      <path
+         d="M 36,18 C 36,8.06 27.94,0 18,0"
+         id="path41"
+         style="stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none">
+        <animateTransform
+           attributeName="transform"
+           type="rotate"
+           from="0 18 18"
+           to="360 18 18"
+           dur="1s"
+           repeatCount="indefinite" />
+      </path>
+    </g>
+  </g>
+</svg>
