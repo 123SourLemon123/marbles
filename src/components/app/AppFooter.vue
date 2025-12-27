@@ -29,14 +29,14 @@
 
     <div
       class="line"
-      :style="{ 'background-image': `url('${assetsPath}img/line.svg')` }"
+      :style="{ 'background-image': `url('${media.line}')` }"
     />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { assetsPath } from '@/config'
+import { media } from '@/config'
 
 interface Link {
   href: string
@@ -68,7 +68,7 @@ export default defineComponent({
 
     return {
       publicPath,
-      assetsPath,
+      media,
       links
     }
   }

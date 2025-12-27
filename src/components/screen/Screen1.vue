@@ -8,20 +8,20 @@
       :key="i"
       class="part"
       :class="`part-${i}`"
-      :src="`${assetsPath}img/part-${i}.svg`"
+      :src="parts[i - 1]"
       :alt="`часть ${i}`"
       loading="lazy"
     >
 
     <img
       class="part part-1-mobile"
-      :src="`${assetsPath}img/part-1.svg`"
+      :src="media.part1"
       alt="часть 1"
     >
 
     <img
       class="cards"
-      :src="`${assetsPath}img/cards.png`"
+      :src="media.cardsPng"
       alt="карточки"
       loading="lazy"
     >
@@ -30,12 +30,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { assetsPath } from '@/config'
+import { media } from '@/config'
 
 export default defineComponent({
   setup () {
+    const parts = [media.part1, media.part2]
+
     return {
-      assetsPath
+      media,
+      parts
     }
   }
 })

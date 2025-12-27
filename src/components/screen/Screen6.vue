@@ -3,7 +3,7 @@
     <div class="screen-content">
       <div class="col-1">
         <form
-          :style="`--bg: url('${assetsPath}img/noise.gif')`"
+          :style="`--bg: url('${media.noise}')`"
           @submit.prevent="onSubmit"
         >
           <div class="form-content">
@@ -34,7 +34,7 @@
         <div class="col-2-content">
           <div class="cost">
             <img
-              :src="`${assetsPath}img/gift.svg`"
+              :src="media.gift"
               alt="подарок"
               loading="lazy"
             >
@@ -68,7 +68,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import AppInput from '../app/AppInput.vue'
-import { assetsPath } from '@/config'
+import { media } from '@/config'
 
 export default defineComponent({
   components: { AppInput },
@@ -88,7 +88,7 @@ export default defineComponent({
     ]
 
     return {
-      assetsPath,
+      media,
       email,
       steps,
 

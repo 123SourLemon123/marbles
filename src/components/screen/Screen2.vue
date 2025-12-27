@@ -2,7 +2,7 @@
   <div class="screen">
     <img
       class="users"
-      :src="`${assetsPath}img/users.svg`"
+      :src="media.users"
       alt="пользователи"
       loading="lazy"
     >
@@ -14,7 +14,7 @@
       :key="i"
       class="shape"
       :class="`shape-${i}`"
-      :src="`${assetsPath}img/shape-${i}.svg`"
+      :src="shapes[i - 1]"
       :alt="`фигура ${i}`"
     >
 
@@ -43,7 +43,7 @@
 <script lang="ts">
 import { defineComponent, ref, computed, onMounted, onUnmounted } from 'vue'
 import { breakpoints } from '../../const.json'
-import { assetsPath } from '@/config'
+import { media } from '@/config'
 
 interface Card {
   img: string
@@ -74,6 +74,7 @@ export default defineComponent({
 
     const windowWidth = ref(window.innerWidth)
     const dragscrollActive = computed(() => windowWidth.value >= breakpoints.md)
+    const shapes = [media.shape1, media.shape2]
 
     function onResize (): void { windowWidth.value = window.innerWidth }
     onMounted(() => {
@@ -84,8 +85,9 @@ export default defineComponent({
     })
 
     return {
-      assetsPath,
+      media,
       cards,
+      shapes,
       dragscrollActive
     }
   }
