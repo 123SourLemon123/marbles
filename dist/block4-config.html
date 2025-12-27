@@ -1,0 +1,252 @@
+<!-- БЛОК 4 (ОПЦИОНАЛЬНО): Конфигурация - вставьте в T123 блок Tilda -->
+<!-- Используйте этот блок для изменения цены, путей к ресурсам и медиа-файлам БЕЗ пересборки -->
+
+<!--
+═══════════════════════════════════════════════════════════════
+💡 РЕКОМЕНДУЕТСЯ: Используйте бесплатный jsDelivr CDN!
+═══════════════════════════════════════════════════════════════
+
+jsDelivr - это бесплатный глобальный CDN для GitHub.
+Медиа будут загружаться БЫСТРО со всего мира!
+
+Формат URL:
+https://cdn.jsdelivr.net/gh/{username}/{repo}@{branch}/dist/
+
+Ваш URL:
+https://cdn.jsdelivr.net/gh/123SourLemon123/marbles@claude/optimize-vue-tilda-SJ5ky/dist/
+
+═══════════════════════════════════════════════════════════════
+-->
+
+<!-- ⭐ БАЗОВАЯ КОНФИГУРАЦИЯ (jsDelivr CDN) -->
+<script>
+window.MARBLES_CONFIG = {
+  price: 3900,        // Цена товара в рублях
+  referralBonus: 750, // Бонус за реферала в рублях
+  assetsPath: 'https://cdn.jsdelivr.net/gh/123SourLemon123/marbles@claude/optimize-vue-tilda-SJ5ky/dist/'
+}
+</script>
+
+<!--
+═══════════════════════════════════════════════════════════════
+📋 СЕМАНТИЧЕСКИЕ НАЗВАНИЯ МЕДИА-ФАЙЛОВ
+═══════════════════════════════════════════════════════════════
+
+Теперь каждый медиа-файл имеет понятное семантическое имя!
+Вместо непонятных "photo", "tick", "shape1" →
+используются описательные названия, указывающие на контекст использования.
+
+Примеры замены:
+❌ Было: media.photo (используется в 11 местах - непонятно где!)
+✅ Стало: media.heroVideoPoster, media.galleryMainPhoto, media.customerReview1Photo...
+
+❌ Было: media.tick (левая или правая стрелка?)
+✅ Стало: media.galleryNavigationArrow (понятно - для навигации в галерее!)
+
+❌ Было: media.productImages[0] (что это за продукт?)
+✅ Стало: media.featureCard1Image (для карточки "1 трлн исходов")
+
+═══════════════════════════════════════════════════════════════
+-->
+
+<!-- ПРИМЕР 1: Изменить только цену -->
+<!--
+<script>
+window.MARBLES_CONFIG = {
+  price: 4500,  // Новая цена
+  assetsPath: 'https://cdn.jsdelivr.net/gh/123SourLemon123/marbles@claude/optimize-vue-tilda-SJ5ky/dist/'
+}
+</script>
+-->
+
+<!-- ПРИМЕР 2: Заменить главное видео на своё -->
+<!--
+<script>
+window.MARBLES_CONFIG = {
+  media: {
+    heroVideoPoster: 'https://my-site.com/video-poster.jpg',  // Постер видео
+    heroVideoMp4: 'https://my-site.com/hero-video.mp4',       // Видео MP4
+    heroVideoWebm: 'https://my-site.com/hero-video.webm'      // Видео WEBM
+  }
+}
+</script>
+-->
+
+<!-- ПРИМЕР 3: Заменить фото отзывов клиентов -->
+<!--
+<script>
+window.MARBLES_CONFIG = {
+  media: {
+    // Международные отзывы (2 фото)
+    internationalReview1Photo: 'https://my-site.com/review-international-1.jpg',
+    internationalReview2Photo: 'https://my-site.com/review-international-2.jpg',
+
+    // Отзывы клиентов (6 фото)
+    customerReview1Photo: 'https://my-site.com/customer-1.jpg',
+    customerReview2Photo: 'https://my-site.com/customer-2.jpg',
+    customerReview3Photo: 'https://my-site.com/customer-3.jpg',
+    customerReview4Photo: 'https://my-site.com/customer-4.jpg',
+    customerReview5Photo: 'https://my-site.com/customer-5.jpg',
+    customerReview6Photo: 'https://my-site.com/customer-6.jpg'
+  }
+}
+</script>
+-->
+
+<!-- ПРИМЕР 4: Заменить GIF-анимации карточек возможностей -->
+<!--
+<script>
+window.MARBLES_CONFIG = {
+  media: {
+    featureCard1Image: 'https://my-site.com/feature-1trln.gif',  // "1 трлн исходов"
+    featureCard2Image: 'https://my-site.com/feature-tactile.gif', // "Тактильные ощущения"
+    featureCard3Image: 'https://my-site.com/feature-teams.gif'    // "Команды и пары"
+  }
+}
+</script>
+-->
+
+<!-- ПРИМЕР 5: Заменить GIF-анимации преимуществ (7 блоков) -->
+<!--
+<script>
+window.MARBLES_CONFIG = {
+  media: {
+    benefit1Image: 'https://my-site.com/benefit-108cards.gif',   // "108 карт"
+    benefit2Image: 'https://my-site.com/benefit-6boards.gif',    // "6 деревянных досок"
+    benefit3Image: 'https://my-site.com/benefit-30marbles.gif',  // "30 стеклянных марблов"
+    benefit4Image: 'https://my-site.com/benefit-2-6players.gif', // "2-6 игроков"
+    benefit5Image: 'https://my-site.com/benefit-30-90min.gif',   // "30-90 минут"
+    benefit6Image: 'https://my-site.com/benefit-combos.gif',     // "10*15 комбинаций"
+    benefit7Image: 'https://my-site.com/benefit-age6.gif'        // "от 6 лет"
+  }
+}
+</script>
+-->
+
+<!-- ПРИМЕР 6: Заменить иконки и декоративные элементы -->
+<!--
+<script>
+window.MARBLES_CONFIG = {
+  media: {
+    // Hero Section
+    heroCardsImage: 'https://my-site.com/cards.png',
+
+    // Иконки
+    featuresUsersIcon: 'https://my-site.com/users-icon.svg',
+    reviewsLaurelIcon: 'https://my-site.com/laurel.svg',
+    reviewsQuoteIcon: 'https://my-site.com/quote.svg',
+    reviewsStarIcon: 'https://my-site.com/star.svg',
+    referralGiftIcon: 'https://my-site.com/gift.svg',
+
+    // Навигация
+    galleryNavigationArrow: 'https://my-site.com/arrow.svg',
+
+    // Контакты
+    contactTelegramIcon: 'https://my-site.com/telegram.svg',
+    contactEmailIcon: 'https://my-site.com/email.svg'
+  }
+}
+</script>
+-->
+
+<!--
+═══════════════════════════════════════════════════════════════
+📖 ПОЛНЫЙ СПИСОК ВСЕХ 54 СЕМАНТИЧЕСКИХ ПЕРЕМЕННЫХ
+═══════════════════════════════════════════════════════════════
+
+=== HERO SECTION (верхний экран с видео) ===
+- heroVideoPoster          // Постер видео (до загрузки)
+- heroVideoMp4             // Главное видео (формат MP4)
+- heroVideoWebm            // Главное видео (формат WEBM)
+
+=== SCREEN 1: Заголовок "МАРБЛС" ===
+- heroDecorationPart1Desktop  // Декоративная часть 1 (desktop)
+- heroDecorationPart1Mobile   // Декоративная часть 1 (mobile)
+- heroDecorationPart2         // Декоративная часть 2
+- heroCardsImage              // Изображение карточек
+
+=== SCREEN 2: Возможности игры (3 карточки) ===
+- featuresUsersIcon           // Иконка пользователей
+- featuresDecorationShape1    // Декоративная фигура 1
+- featuresDecorationShape2    // Декоративная фигура 2
+- featureCard1Image           // "1 трлн возможных исходов"
+- featureCard2Image           // "Очень крутые тактильные ощущения"
+- featureCard3Image           // "Объединяйтесь в команды и пары"
+
+=== SCREEN 3: Отзывы и признание ===
+- reviewsBackgroundShape3     // Фоновая фигура 3
+- reviewsBackgroundShape4     // Фоновая фигура 4
+- reviewsBackgroundShape5     // Фоновая фигура 5
+- reviewsLaurelIcon           // Иконка лаврового венка
+- reviewsQuoteIcon            // Иконка кавычек
+- reviewsStarIcon             // Иконка звезды (для рейтинга)
+- reviewsDecorationPart       // Декоративная часть (желтая)
+- internationalReview1Photo   // Фото международного отзыва 1
+- internationalReview2Photo   // Фото международного отзыва 2
+- customerReview1Photo        // Фото отзыва клиента 1 (Лина, г. Кастрома)
+- customerReview2Photo        // Фото отзыва клиента 2 (Владимир, г. Москва)
+- customerReview3Photo        // Фото отзыва клиента 3
+- customerReview4Photo        // Фото отзыва клиента 4
+- customerReview5Photo        // Фото отзыва клиента 5
+- customerReview6Photo        // Фото отзыва клиента 6
+
+=== SCREEN 4: Галерея продукта ===
+- galleryNavigationArrow      // Стрелки навигации (левая/правая)
+- galleryMainPhoto            // Главное фото в галерее
+
+=== SCREEN 5: Преимущества (7 блоков) ===
+- benefitsDecorativeDots      // Декоративные точки
+- benefitsCardFront           // Лицевая сторона карты
+- benefitsCardBack            // Обратная сторона карты
+- benefit1Image               // "108 карт"
+- benefit2Image               // "6 деревянных досок"
+- benefit3Image               // "30 стеклянных марблов"
+- benefit4Image               // "2-6 игроков"
+- benefit5Image               // "30-90 минут игрового времени"
+- benefit6Image               // "10*15 игровых комбинаций"
+- benefit7Image               // "от 6 лет"
+
+=== SCREEN 6: Подписка + Реферальная программа ===
+- signupBackgroundNoise       // Фоновый шум для формы подписки
+- referralGiftIcon            // Иконка подарка (реферальная программа)
+
+=== SCREEN 7: Вторая секция покупки ===
+- buyBackgroundPattern        // Фоновый паттерн
+- buyProductBox               // Изображение коробки продукта
+- buyProductCards             // Изображение карт продукта
+
+=== SCREEN 8: Контакты ===
+- contactTelegramIcon         // Иконка Telegram
+- contactEmailIcon            // Иконка Email
+
+=== FOOTER: Подвал сайта ===
+- footerDecorativeLine        // Декоративная линия в футере
+
+═══════════════════════════════════════════════════════════════
+✨ ПРЕИМУЩЕСТВА СЕМАНТИЧЕСКИХ ИМЕН
+═══════════════════════════════════════════════════════════════
+
+✅ Понятно, где используется каждый файл
+✅ Легко заменить конкретное изображение
+✅ Нет путаницы между одинаковыми файлами в разных местах
+✅ Самодокументирующийся код
+✅ Легко найти нужную переменную
+
+Пример:
+Хотите заменить фото в отзыве клиента 3?
+→ Ищите customerReview3Photo (а не загадочное media.photo)
+
+Хотите заменить иконку Telegram?
+→ Ищите contactTelegramIcon (а не загадочное media.telegram)
+
+═══════════════════════════════════════════════════════════════
+🚀 ПРОВЕРИТЬ ДОСТУПНОСТЬ ФАЙЛОВ НА jsDelivr CDN:
+═══════════════════════════════════════════════════════════════
+
+Откройте в браузере:
+https://cdn.jsdelivr.net/gh/123SourLemon123/marbles@claude/optimize-vue-tilda-SJ5ky/dist/img/photo.jpeg
+
+Если файл открывается - всё работает! ✅
+
+═══════════════════════════════════════════════════════════════
+-->
