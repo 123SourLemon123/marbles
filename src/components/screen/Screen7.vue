@@ -1,20 +1,20 @@
 <template>
   <div
     class="screen"
-    :style="{ background: `url('${assetsPath}img/pattern.svg')`}"
+    :style="{ background: `url('${media.pattern}')`}"
   >
     <div class="screen-content">
       <div class="col-1">
         <div class="circle" />
         <img
           class="box"
-          :src="`${assetsPath}img/box.svg`"
+          :src="media.box"
           alt="коробка"
           loading="lazy"
         >
         <img
           class="cards"
-          :src="`${assetsPath}img/cards.svg`"
+          :src="media.cards"
           alt="карты"
           loading="lazy"
         >
@@ -30,14 +30,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import AppBuy from '../app/AppBuy.vue'
-import { assetsPath } from '@/config'
+import { media } from '@/config'
 
 export default defineComponent({
   components: { AppBuy },
 
   setup () {
     return {
-      assetsPath
+      media
     }
   }
 })

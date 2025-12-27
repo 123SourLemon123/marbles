@@ -26,7 +26,7 @@
           <button
             class="tick"
             :disabled="currentImg === 0"
-            :style="{ background: `url('${assetsPath}img/tick.svg')` }"
+            :style="{ background: `url('${media.tick}')` }"
             alt="<"
             @click="incImg(-1)"
           />
@@ -37,7 +37,7 @@
           <button
             class="tick"
             :disabled="currentImg === images.length - 1"
-            :style="{ background: `url('${assetsPath}img/tick.svg')` }"
+            :style="{ background: `url('${media.tick}')` }"
             alt=">"
             @click="incImg(1)"
           />
@@ -106,7 +106,7 @@
 import { defineComponent, ref } from 'vue'
 import AppBuy from '../app/AppBuy.vue'
 import AppExternalLink from '../app/AppExternalLink.vue'
-import { assetsPath } from '@/config'
+import { media } from '@/config'
 
 export default defineComponent({
   components: {
@@ -116,7 +116,7 @@ export default defineComponent({
 
   setup () {
     const images = [
-      `${assetsPath}img/photo.jpeg`,
+      media.photo,
       'https://picsum.photos/600/800',
       'https://picsum.photos/601/800'
       /*
@@ -137,7 +137,7 @@ export default defineComponent({
     }
 
     return {
-      assetsPath,
+      media,
       images,
       currentImg,
 

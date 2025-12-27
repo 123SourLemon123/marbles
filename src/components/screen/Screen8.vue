@@ -24,7 +24,7 @@
             :href="`https://t.me/${tg}`"
           >
             <img
-              :src="`${assetsPath}img/telegram.svg`"
+              :src="media.telegram"
               alt="telegram"
               loading="lazy"
             >
@@ -36,7 +36,7 @@
             :href="`mailto:${email}`"
           >
             <img
-              :src="`${assetsPath}img/email.svg`"
+              :src="media.email"
               alt="email"
               loading="lazy"
             >
@@ -55,14 +55,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import AppExternalLink from '../app/AppExternalLink.vue'
-import { assetsPath } from '@/config'
+import { media } from '@/config'
 
 export default defineComponent({
   components: { AppExternalLink },
 
   setup () {
     return {
-      assetsPath,
+      media,
       tg: 'nikolayr',
       email: 'help@marbls.ru'
     }

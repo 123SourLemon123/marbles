@@ -5,11 +5,11 @@
       :key="i"
       class="shape"
       :class="`shape-${i + 2}`"
-      :src="`${assetsPath}img/shape-${i + 2}.svg`"
+      :src="i === 1 ? media.shape3 : media.shape4"
       :alt="`фигура ${i + 2}`"
     >
     <img
-      :src="`${assetsPath}img/shape-5.svg`"
+      :src="media.shape5"
       alt="фигура 5"
       class="shape shape-5"
     >
@@ -17,7 +17,7 @@
     <div class="cols">
       <div class="col col-1">
         <img
-          :src="`${assetsPath}img/laurel.png`"
+          :src="media.laurel"
           alt="лавры"
           loading="lazy"
         >
@@ -43,7 +43,7 @@
       <div class="col col-2">
         <img
           class="quote"
-          :src="`${assetsPath}img/quote.svg`"
+          :src="media.quote"
           alt="кавычки"
           loading="lazy"
         >
@@ -71,7 +71,7 @@
                 <img
                   v-for="j in review.rate"
                   :key="j"
-                  :src="`${assetsPath}img/star.svg`"
+                  :src="media.star"
                   alt="звезда"
                   loading="lazy"
                 >
@@ -89,7 +89,7 @@
 
         <img
           class="part"
-          :src="`${assetsPath}img/part-1-yellow.svg`"
+          :src="media.part1Yellow"
           alt="часть 1"
           loading="lazy"
         >
@@ -101,7 +101,7 @@
 <script lang="ts">
 import { computed, defineComponent, onMounted, onUnmounted, ref } from 'vue'
 import { breakpoints } from '../../const.json'
-import { assetsPath } from '@/config'
+import { media } from '@/config'
 
 interface Review1 {
   img: string
@@ -119,49 +119,49 @@ export default defineComponent({
   setup () {
     const reviews1: Review1[] = [
       {
-        img: `${assetsPath}img/photo.jpeg`,
+        img: media.photo,
         text: 'Кажется эта игра встанет рядом с Монополией и Шахматами'
       },
       {
-        img: `${assetsPath}img/photo.jpeg`,
+        img: media.photo,
         text: 'Однозначно лучшая игра и геймплей 2020'
       }
     ]
 
     const reviews2: Review2[] = [
       {
-        img: `${assetsPath}img/photo.jpeg`,
+        img: media.photo,
         rate: 5,
         author: 'Лина, г. Кастрома',
         text: `Ребята, игра ФАНТАСТИКА играем с друзьями уютными
 вечерами, когда собираемся вместе`
       },
       {
-        img: `${assetsPath}img/photo.jpeg`,
+        img: media.photo,
         rate: 5,
         author: 'Владимир, г. Москва',
         text: 'Доставили за 2 дня. Вся компания довольна. Любим настолки'
       },
       {
-        img: `${assetsPath}img/photo.jpeg`,
+        img: media.photo,
         rate: 5,
         author: 'Владимир, г. Москва',
         text: 'Доставили за 2 дня. Вся компания довольна. Любим настолки'
       },
       {
-        img: `${assetsPath}img/photo.jpeg`,
+        img: media.photo,
         rate: 5,
         author: 'Владимир, г. Москва',
         text: 'Доставили за 2 дня. Вся компания довольна. Любим настолки'
       },
       {
-        img: `${assetsPath}img/photo.jpeg`,
+        img: media.photo,
         rate: 5,
         author: 'Владимир, г. Москва',
         text: 'Доставили за 2 дня. Вся компания довольна. Любим настолки'
       },
       {
-        img: `${assetsPath}img/photo.jpeg`,
+        img: media.photo,
         rate: 5,
         author: 'Владимир, г. Москва',
         text: 'Доставили за 2 дня. Вся компания довольна. Любим настолки'
@@ -180,7 +180,7 @@ export default defineComponent({
     })
 
     return {
-      assetsPath,
+      media,
       reviews1,
       reviews2,
       dragscrollActive
