@@ -5,11 +5,11 @@
       :key="i"
       class="shape"
       :class="`shape-${i + 2}`"
-      :src="i === 1 ? media.shape3 : media.shape4"
+      :src="i === 1 ? media.reviewsBackgroundShape3 : media.reviewsBackgroundShape4"
       :alt="`фигура ${i + 2}`"
     >
     <img
-      :src="media.shape5"
+      :src="media.reviewsBackgroundShape5"
       alt="фигура 5"
       class="shape shape-5"
     >
@@ -17,7 +17,7 @@
     <div class="cols">
       <div class="col col-1">
         <img
-          :src="media.laurel"
+          :src="media.reviewsLaurelIcon"
           alt="лавры"
           loading="lazy"
         >
@@ -43,7 +43,7 @@
       <div class="col col-2">
         <img
           class="quote"
-          :src="media.quote"
+          :src="media.reviewsQuoteIcon"
           alt="кавычки"
           loading="lazy"
         >
@@ -71,7 +71,7 @@
                 <img
                   v-for="j in review.rate"
                   :key="j"
-                  :src="media.star"
+                  :src="media.reviewsStarIcon"
                   alt="звезда"
                   loading="lazy"
                 >
@@ -89,7 +89,7 @@
 
         <img
           class="part"
-          :src="media.part1Yellow"
+          :src="media.reviewsDecorationPart"
           alt="часть 1"
           loading="lazy"
         >
@@ -119,49 +119,49 @@ export default defineComponent({
   setup () {
     const reviews1: Review1[] = [
       {
-        img: media.photo,
+        img: media.internationalReview1Photo,
         text: 'Кажется эта игра встанет рядом с Монополией и Шахматами'
       },
       {
-        img: media.photo,
+        img: media.internationalReview2Photo,
         text: 'Однозначно лучшая игра и геймплей 2020'
       }
     ]
 
     const reviews2: Review2[] = [
       {
-        img: media.photo,
+        img: media.customerReview1Photo,
         rate: 5,
         author: 'Лина, г. Кастрома',
         text: `Ребята, игра ФАНТАСТИКА играем с друзьями уютными
 вечерами, когда собираемся вместе`
       },
       {
-        img: media.photo,
+        img: media.customerReview2Photo,
         rate: 5,
         author: 'Владимир, г. Москва',
         text: 'Доставили за 2 дня. Вся компания довольна. Любим настолки'
       },
       {
-        img: media.photo,
+        img: media.customerReview3Photo,
         rate: 5,
         author: 'Владимир, г. Москва',
         text: 'Доставили за 2 дня. Вся компания довольна. Любим настолки'
       },
       {
-        img: media.photo,
+        img: media.customerReview4Photo,
         rate: 5,
         author: 'Владимир, г. Москва',
         text: 'Доставили за 2 дня. Вся компания довольна. Любим настолки'
       },
       {
-        img: media.photo,
+        img: media.customerReview5Photo,
         rate: 5,
         author: 'Владимир, г. Москва',
         text: 'Доставили за 2 дня. Вся компания довольна. Любим настолки'
       },
       {
-        img: media.photo,
+        img: media.customerReview6Photo,
         rate: 5,
         author: 'Владимир, г. Москва',
         text: 'Доставили за 2 дня. Вся компания довольна. Любим настолки'

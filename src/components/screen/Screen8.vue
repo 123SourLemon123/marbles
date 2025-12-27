@@ -24,7 +24,7 @@
             :href="`https://t.me/${tg}`"
           >
             <img
-              :src="media.telegram"
+              :src="media.contactTelegramIcon"
               alt="telegram"
               loading="lazy"
             >
@@ -36,7 +36,7 @@
             :href="`mailto:${email}`"
           >
             <img
-              :src="media.email"
+              :src="media.contactEmailIcon"
               alt="email"
               loading="lazy"
             >

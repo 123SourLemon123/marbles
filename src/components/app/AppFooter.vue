@@ -29,7 +29,7 @@
 
     <div
       class="line"
-      :style="{ 'background-image': `url('${media.line}')` }"
+      :style="{ 'background-image': `url('${media.footerDecorativeLine}')` }"
     />
   </div>
 </template>

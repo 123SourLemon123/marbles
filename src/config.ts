@@ -2,51 +2,73 @@
 // Позволяет легко менять цену, пути к ресурсам и медиа-файлы
 
 interface MediaPaths {
-  // Общие
-  photo: string
-  line: string
-  pattern: string
-  noise: string
+  // === HERO SECTION (верхний экран с видео) ===
+  heroVideoPoster: string // Постер видео (показывается до загрузки)
+  heroVideoMp4: string // Главное видео (формат MP4)
+  heroVideoWebm: string // Главное видео (формат WEBM)
 
-  // Игра
-  box: string
-  cards: string
-  cardsPng: string
-  cardFront: string
-  cardBack: string
-  ball: string
+  // === SCREEN 1: Заголовок "МАРБЛС" ===
+  heroDecorationPart1Desktop: string // Декоративная часть 1 (desktop)
+  heroDecorationPart1Mobile: string // Декоративная часть 1 (mobile)
+  heroDecorationPart2: string // Декоративная часть 2
+  heroCardsImage: string // Изображение карточек
 
-  // Декоративные
-  gift: string
-  laurel: string
-  quote: string
-  star: string
-  dots: string
-  users: string
-  tick: string
+  // === SCREEN 2: Возможности игры (3 карточки) ===
+  featuresUsersIcon: string // Иконка пользователей
+  featuresDecorationShape1: string // Декоративная фигура 1
+  featuresDecorationShape2: string // Декоративная фигура 2
+  featureCard1Image: string // Изображение для карточки "1 трлн исходов"
+  featureCard2Image: string // Изображение для карточки "Тактильные ощущения"
+  featureCard3Image: string // Изображение для карточки "Команды и пары"
 
-  // Фигуры/Shapes
-  shape1: string
-  shape2: string
-  shape3: string
-  shape4: string
-  shape5: string
+  // === SCREEN 3: Отзывы и признание ===
+  reviewsBackgroundShape3: string // Фоновая фигура 3
+  reviewsBackgroundShape4: string // Фоновая фигура 4
+  reviewsBackgroundShape5: string // Фоновая фигура 5
+  reviewsLaurelIcon: string // Иконка лаврового венка
+  reviewsQuoteIcon: string // Иконка кавычек
+  reviewsStarIcon: string // Иконка звезды (для рейтинга)
+  reviewsDecorationPart: string // Декоративная часть (желтая)
+  internationalReview1Photo: string // Фото международного отзыва 1
+  internationalReview2Photo: string // Фото международного отзыва 2
+  customerReview1Photo: string // Фото отзыва клиента 1
+  customerReview2Photo: string // Фото отзыва клиента 2
+  customerReview3Photo: string // Фото отзыва клиента 3
+  customerReview4Photo: string // Фото отзыва клиента 4
+  customerReview5Photo: string // Фото отзыва клиента 5
+  customerReview6Photo: string // Фото отзыва клиента 6
 
-  // Части/Parts
-  part1: string
-  part2: string
-  part1Yellow: string
+  // === SCREEN 4: Галерея продукта ===
+  galleryNavigationArrow: string // Стрелки навигации (левая/правая)
+  galleryMainPhoto: string // Главное фото в галерее
 
-  // Соцсети
-  telegram: string
-  email: string
+  // === SCREEN 5: Преимущества (7 блоков) ===
+  benefitsDecorativeDots: string // Декоративные точки
+  benefitsCardFront: string // Лицевая сторона карты
+  benefitsCardBack: string // Обратная сторона карты
+  benefit1Image: string // Изображение "108 карт"
+  benefit2Image: string // Изображение "6 деревянных досок"
+  benefit3Image: string // Изображение "30 стеклянных марблов"
+  benefit4Image: string // Изображение "2-6 игроков"
+  benefit5Image: string // Изображение "30-90 минут"
+  benefit6Image: string // Изображение "10*15 комбинаций"
+  benefit7Image: string // Изображение "от 6 лет"
 
-  // Видео
-  heroVideo: string
-  heroVideoWebm: string
+  // === SCREEN 6: Подписка на email + Реферальная программа ===
+  signupBackgroundNoise: string // Фоновый шум для формы подписки
+  referralGiftIcon: string // Иконка подарка (реферальная программа)
 
-  // Галерея товаров (GIF анимации)
-  productImages: string[]
+  // === SCREEN 7: Вторая секция покупки ===
+  buyBackgroundPattern: string // Фоновый паттерн
+  buyProductBox: string // Изображение коробки продукта
+  buyProductCards: string // Изображение карт продукта
+
+  // === SCREEN 8: Контакты ===
+  contactTelegramIcon: string // Иконка Telegram
+  contactEmailIcon: string // Иконка Email
+
+  // === FOOTER: Подвал сайта ===
+  footerDecorativeLine: string // Декоративная линия в футере
 }
 
 interface MarblesConfig {
@@ -74,61 +96,73 @@ const getMediaPath = (filename: string): string => `${baseAssetsPath}img/${filen
 
 // Дефолтные пути к медиа
 const defaultMedia: MediaPaths = {
-  // Общие
-  photo: getMediaPath('photo.jpeg'),
-  line: getMediaPath('line.svg'),
-  pattern: getMediaPath('pattern.svg'),
-  noise: getMediaPath('noise.gif'),
-
-  // Игра
-  box: getMediaPath('box.svg'),
-  cards: getMediaPath('cards.svg'),
-  cardsPng: getMediaPath('cards.png'),
-  cardFront: getMediaPath('card-front.svg'),
-  cardBack: getMediaPath('card-back.svg'),
-  ball: getMediaPath('ball.svg'),
-
-  // Декоративные
-  gift: getMediaPath('gift.svg'),
-  laurel: getMediaPath('laurel.png'),
-  quote: getMediaPath('quote.svg'),
-  star: getMediaPath('star.svg'),
-  dots: getMediaPath('dots.svg'),
-  users: getMediaPath('users.svg'),
-  tick: getMediaPath('tick.svg'),
-
-  // Фигуры
-  shape1: getMediaPath('shape-1.svg'),
-  shape2: getMediaPath('shape-2.svg'),
-  shape3: getMediaPath('shape-3.svg'),
-  shape4: getMediaPath('shape-4.svg'),
-  shape5: getMediaPath('shape-5.svg'),
-
-  // Части
-  part1: getMediaPath('part-1.svg'),
-  part2: getMediaPath('part-2.svg'),
-  part1Yellow: getMediaPath('part-1-yellow.svg'),
-
-  // Соцсети
-  telegram: getMediaPath('telegram.svg'),
-  email: getMediaPath('email.svg'),
-
-  // Видео
-  heroVideo: 'https://cdn.shopify.com/s/files/1/0312/2737/9849/files/HomeHero_20210120.mp4',
+  // === HERO SECTION ===
+  heroVideoPoster: getMediaPath('photo.jpeg'),
+  heroVideoMp4: 'https://cdn.shopify.com/s/files/1/0312/2737/9849/files/HomeHero_20210120.mp4',
   heroVideoWebm: 'https://cdn.shopify.com/s/files/1/0312/2737/9849/files/HomeHero_20210120.webm',
 
-  // Галерея товаров (GIF анимации камней/минералов)
-  productImages: [
-    'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/amethyst-shere-xxl.mov-low_2048x.gif',
-    'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/black-obsidian-sphere-xxl.mov-low_2048x.gif',
-    'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/Hnet-image_4_68320e8f-bf73-4701-a0a0-1fefb87a45d0_2048x.gif',
-    'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/spirit-quartz-xxl-consign.mov-low_2048x.gif',
-    'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/Hnet-image_7_82a06331-8999-4f67-bcdc-d60074c92eb5_2048x.gif',
-    'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/small-museum-fluorite-.mov-low_2048x.gif',
-    'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/onyx-sphere-xxl.mov-low_2048x.gif',
-    'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/Hnet-image_9_db151902-968d-4368-9365-d16be794914d_2048x.gif',
-    'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/Hnet.com-image_16_400x.gif'
-  ]
+  // === SCREEN 1: Заголовок ===
+  heroDecorationPart1Desktop: getMediaPath('part-1.svg'),
+  heroDecorationPart1Mobile: getMediaPath('part-1.svg'),
+  heroDecorationPart2: getMediaPath('part-2.svg'),
+  heroCardsImage: getMediaPath('cards.png'),
+
+  // === SCREEN 2: Возможности ===
+  featuresUsersIcon: getMediaPath('users.svg'),
+  featuresDecorationShape1: getMediaPath('shape-1.svg'),
+  featuresDecorationShape2: getMediaPath('shape-2.svg'),
+  featureCard1Image: 'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/amethyst-shere-xxl.mov-low_2048x.gif',
+  featureCard2Image: 'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/black-obsidian-sphere-xxl.mov-low_2048x.gif',
+  featureCard3Image: 'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/Hnet-image_4_68320e8f-bf73-4701-a0a0-1fefb87a45d0_2048x.gif',
+
+  // === SCREEN 3: Отзывы ===
+  reviewsBackgroundShape3: getMediaPath('shape-3.svg'),
+  reviewsBackgroundShape4: getMediaPath('shape-4.svg'),
+  reviewsBackgroundShape5: getMediaPath('shape-5.svg'),
+  reviewsLaurelIcon: getMediaPath('laurel.png'),
+  reviewsQuoteIcon: getMediaPath('quote.svg'),
+  reviewsStarIcon: getMediaPath('star.svg'),
+  reviewsDecorationPart: getMediaPath('part-1-yellow.svg'),
+  internationalReview1Photo: getMediaPath('photo.jpeg'),
+  internationalReview2Photo: getMediaPath('photo.jpeg'),
+  customerReview1Photo: getMediaPath('photo.jpeg'),
+  customerReview2Photo: getMediaPath('photo.jpeg'),
+  customerReview3Photo: getMediaPath('photo.jpeg'),
+  customerReview4Photo: getMediaPath('photo.jpeg'),
+  customerReview5Photo: getMediaPath('photo.jpeg'),
+  customerReview6Photo: getMediaPath('photo.jpeg'),
+
+  // === SCREEN 4: Галерея ===
+  galleryNavigationArrow: getMediaPath('tick.svg'),
+  galleryMainPhoto: getMediaPath('photo.jpeg'),
+
+  // === SCREEN 5: Преимущества ===
+  benefitsDecorativeDots: getMediaPath('dots.svg'),
+  benefitsCardFront: getMediaPath('card-front.svg'),
+  benefitsCardBack: getMediaPath('card-back.svg'),
+  benefit1Image: 'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/spirit-quartz-xxl-consign.mov-low_2048x.gif',
+  benefit2Image: 'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/Hnet-image_7_82a06331-8999-4f67-bcdc-d60074c92eb5_2048x.gif',
+  benefit3Image: 'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/black-obsidian-sphere-xxl.mov-low_2048x.gif',
+  benefit4Image: 'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/small-museum-fluorite-.mov-low_2048x.gif',
+  benefit5Image: 'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/onyx-sphere-xxl.mov-low_2048x.gif',
+  benefit6Image: 'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/Hnet-image_9_db151902-968d-4368-9365-d16be794914d_2048x.gif',
+  benefit7Image: 'https://cdn.shopify.com/s/files/1/0252/6845/3410/products/Hnet.com-image_16_400x.gif',
+
+  // === SCREEN 6: Подписка ===
+  signupBackgroundNoise: getMediaPath('noise.gif'),
+  referralGiftIcon: getMediaPath('gift.svg'),
+
+  // === SCREEN 7: Вторая покупка ===
+  buyBackgroundPattern: getMediaPath('pattern.svg'),
+  buyProductBox: getMediaPath('box.svg'),
+  buyProductCards: getMediaPath('cards.svg'),
+
+  // === SCREEN 8: Контакты ===
+  contactTelegramIcon: getMediaPath('telegram.svg'),
+  contactEmailIcon: getMediaPath('email.svg'),
+
+  // === FOOTER ===
+  footerDecorativeLine: getMediaPath('line.svg')
 }
 
 const defaultConfig: MarblesConfig = {

@@ -2,7 +2,7 @@
   <div class="screen">
     <img
       class="users"
-      :src="media.users"
+      :src="media.featuresUsersIcon"
       alt="пользователи"
       loading="lazy"
     >
@@ -55,18 +55,18 @@ export default defineComponent({
   setup () {
     const cards: Card[] = [
       {
-        img: media.productImages[0],
+        img: media.featureCard1Image,
         title: 'В игре более 1 трлн возможных исходов',
         desc: `Вы никогда не будете играть в одну и ту же игру,
 вам никогда не надоест, обещаем!`
       },
       {
-        img: media.productImages[1],
+        img: media.featureCard2Image,
         title: 'Очень крутые тактильные ощущения',
         desc: 'В игре используются деревянные доски и стеклянные шарики марблсы'
       },
       {
-        img: media.productImages[2],
+        img: media.featureCard3Image,
         title: 'Объединяйтесь в команды и пары',
         desc: 'Собирайтесь командой до 6 людей и играйте в свое удовольствие'
       }
@@ -74,7 +74,7 @@ export default defineComponent({
 
     const windowWidth = ref(window.innerWidth)
     const dragscrollActive = computed(() => windowWidth.value >= breakpoints.md)
-    const shapes = [media.shape1, media.shape2]
+    const shapes = [media.featuresDecorationShape1, media.featuresDecorationShape2]
 
     function onResize (): void { windowWidth.value = window.innerWidth }
     onMounted(() => {

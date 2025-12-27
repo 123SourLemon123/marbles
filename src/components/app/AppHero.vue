@@ -4,14 +4,14 @@
     muted
     loop
     playsinline
-    :poster="media.photo"
+    :poster="media.heroVideoPoster"
   >
     <source
       :src="media.heroVideoWebm"
       type="video/webm"
     >
     <source
-      :src="media.heroVideo"
+      :src="media.heroVideoMp4"
       type="video/mp4"
     >
   </video>

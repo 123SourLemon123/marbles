@@ -3,7 +3,7 @@
     <div class="screen-content">
       <div class="col-1">
         <form
-          :style="`--bg: url('${media.noise}')`"
+          :style="`--bg: url('${media.signupBackgroundNoise}')`"
           @submit.prevent="onSubmit"
         >
           <div class="form-content">
@@ -34,7 +34,7 @@
         <div class="col-2-content">
           <div class="cost">
             <img
-              :src="media.gift"
+              :src="media.referralGiftIcon"
               alt="подарок"
               loading="lazy"
             >

@@ -26,7 +26,7 @@
           <button
             class="tick"
             :disabled="currentImg === 0"
-            :style="{ background: `url('${media.tick}')` }"
+            :style="{ background: `url('${media.galleryNavigationArrow}')` }"
             alt="<"
             @click="incImg(-1)"
           />
@@ -37,7 +37,7 @@
           <button
             class="tick"
             :disabled="currentImg === images.length - 1"
-            :style="{ background: `url('${media.tick}')` }"
+            :style="{ background: `url('${media.galleryNavigationArrow}')` }"
             alt=">"
             @click="incImg(1)"
           />
@@ -116,7 +116,7 @@ export default defineComponent({
 
   setup () {
     const images = [
-      media.photo,
+      media.galleryMainPhoto,
       'https://picsum.photos/600/800',
       'https://picsum.photos/601/800'
       /*

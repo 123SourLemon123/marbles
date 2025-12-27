@@ -3,7 +3,7 @@
     <div class="benefits">
       <div class="heading">
         <img
-          :src="media.dots"
+          :src="media.benefitsDecorativeDots"
           alt="точки"
           loading="lazy"
         >
@@ -50,7 +50,7 @@
       <img
         v-for="i in 20"
         :key="i"
-        v-lazy="i % 2 ? media.cardFront : media.cardBack"
+        v-lazy="i % 2 ? media.benefitsCardFront : media.benefitsCardBack"
         alt="карта"
         loading="lazy"
       >
@@ -64,7 +64,7 @@
       <img
         v-for="i in 20"
         :key="i"
-        v-lazy="i % 2 ? media.cardFront : media.cardBack"
+        v-lazy="i % 2 ? media.benefitsCardFront : media.benefitsCardBack"
         alt="карта"
         loading="lazy"
       >
@@ -87,37 +87,37 @@ export default defineComponent({
   setup () {
     const benefits: Benefit[] = [
       {
-        img: media.productImages[3],
+        img: media.benefit1Image,
         num: '108',
         item: 'карт'
       },
       {
-        img: media.productImages[4],
+        img: media.benefit2Image,
         num: '6',
         item: 'деревянных досок'
       },
       {
-        img: media.productImages[1], // Используется также в Screen2
+        img: media.benefit3Image,
         num: '30',
         item: 'стеклянных марблов'
       },
       {
-        img: media.productImages[5],
+        img: media.benefit4Image,
         num: '2-6',
         item: 'игроков'
       },
       {
-        img: media.productImages[6],
+        img: media.benefit5Image,
         num: '30-90',
         item: 'минут игрового времени'
       },
       {
-        img: media.productImages[7],
+        img: media.benefit6Image,
         num: '10*15',
         item: 'игровых комбинаций'
       },
       {
-        img: media.productImages[8],
+        img: media.benefit7Image,
         num: 'от 6',
         item: 'лет'
       }

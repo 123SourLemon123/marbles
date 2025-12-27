@@ -1,20 +1,20 @@
 <template>
   <div
     class="screen"
-    :style="{ background: `url('${media.pattern}')`}"
+    :style="{ background: `url('${media.buyBackgroundPattern}')`}"
   >
     <div class="screen-content">
       <div class="col-1">
         <div class="circle" />
         <img
           class="box"
-          :src="media.box"
+          :src="media.buyProductBox"
           alt="коробка"
           loading="lazy"
         >
         <img
           class="cards"
-          :src="media.cards"
+          :src="media.buyProductCards"
           alt="карты"
           loading="lazy"
         >

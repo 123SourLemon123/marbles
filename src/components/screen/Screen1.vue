@@ -15,13 +15,13 @@
 
     <img
       class="part part-1-mobile"
-      :src="media.part1"
+      :src="media.heroDecorationPart1Mobile"
       alt="часть 1"
     >
 
     <img
       class="cards"
-      :src="media.cardsPng"
+      :src="media.heroCardsImage"
       alt="карточки"
       loading="lazy"
     >
@@ -34,7 +34,7 @@ import { media } from '@/config'
 
 export default defineComponent({
   setup () {
-    const parts = [media.part1, media.part2]
+    const parts = [media.heroDecorationPart1Desktop, media.heroDecorationPart2]
 
     return {
       media,
