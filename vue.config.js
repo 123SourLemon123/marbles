@@ -30,19 +30,7 @@ module.exports = {
 
   configureWebpack: {
     externals: {
-      vue: 'Vue',
-      'vue3-lazyload': {
-        root: 'Vue3Lazyload',
-        commonjs: 'vue3-lazyload',
-        commonjs2: 'vue3-lazyload',
-        amd: 'vue3-lazyload'
-      },
-      'vue-dragscroll': {
-        root: 'VueDragscroll',
-        commonjs: 'vue-dragscroll',
-        commonjs2: 'vue-dragscroll',
-        amd: 'vue-dragscroll'
-      }
+      vue: 'Vue'
     },
     optimization: { splitChunks: false },
     plugins: [
