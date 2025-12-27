@@ -7,7 +7,7 @@
     :poster="media.photo"
   >
     <source
-      src="https://cdn.shopify.com/s/files/1/0312/2737/9849/files/HomeHero_20210120.webm"
+      :src="media.heroVideoWebm"
       type="video/webm"
     >
     <source

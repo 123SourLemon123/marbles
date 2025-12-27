@@ -43,6 +43,7 @@ interface MediaPaths {
 
   // Видео
   heroVideo: string
+  heroVideoWebm: string
 }
 
 interface MarblesConfig {
@@ -110,7 +111,8 @@ const defaultMedia: MediaPaths = {
   email: getMediaPath('email.svg'),
 
   // Видео
-  heroVideo: 'https://cdn.shopify.com/s/files/1/0312/2737/9849/files/HomeHero_20210120.mp4'
+  heroVideo: 'https://cdn.shopify.com/s/files/1/0312/2737/9849/files/HomeHero_20210120.mp4',
+  heroVideoWebm: 'https://cdn.shopify.com/s/files/1/0312/2737/9849/files/HomeHero_20210120.webm'
 }
 
 const defaultConfig: MarblesConfig = {
