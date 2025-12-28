@@ -38,13 +38,13 @@
               alt="подарок"
               loading="lazy"
             >
-            <p>750 ₽ + 750 ₽</p>
+            <p>{{ referralBonus }} ₽ + {{ referralBonus }} ₽</p>
           </div>
 
           <h3>Зовите друзей!</h3>
           <p class="desc">
-            После покупки вашими друзьями игры МАРБЛС мы вернем им 750 рублей.
-            Но и вы тоже получите 750 рублей удобным для вас способом
+            После покупки вашими друзьями игры МАРБЛС мы вернем им {{ referralBonus }} рублей.
+            Но и вы тоже получите {{ referralBonus }} рублей удобным для вас способом
           </p>
 
           <p class="how">
@@ -68,7 +68,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import AppInput from '../app/AppInput.vue'
-import { media } from '@/config'
+import { media, referralBonus } from '@/config'
 
 export default defineComponent({
   components: { AppInput },
@@ -84,11 +84,12 @@ export default defineComponent({
       'Купить игру МАРБЛС',
       'Порекомендовать игру друзьям',
       'Друг должен назвать ваш номер телефона, после оформления заказа',
-      'Получить по 750 рублей'
+      `Получить по ${referralBonus} рублей`
     ]
 
     return {
       media,
+      referralBonus,
       email,
       steps,
 
