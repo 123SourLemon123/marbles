@@ -160,19 +160,19 @@ export default defineComponent({
     }
 
     a {
-      color: $text-main;
+      color: #252525;
       text-decoration: none;
 
       &:hover {
-        color: $yellow;
+        color: #f5df4d;
 
         @include media-breakpoint-down(md) {
-          color: $yellow !important;
+          color: #f5df4d !important;
         }
       }
 
       &:active {
-        color: rgba($yellow, 0.5);
+        color: rgba(#f5df4d, 0.5);
       }
     }
   }
