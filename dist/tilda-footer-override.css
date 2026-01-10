@@ -1,6 +1,6 @@
 /*
  * Tilda Footer Links Override
- * Специальный CSS для переопределения цвета ссылок в футере
+ * Специальный CSS для переопределения ТОЛЬКО цвета ссылок в футере
  *
  * ИНСТРУКЦИЯ ПО УСТАНОВКЕ:
  * 1. Загрузите этот файл в Tilda: Настройки сайта -> Еще -> Библиотека файлов
@@ -9,78 +9,33 @@
  *    <link rel="stylesheet" href="ВАШ_URL_ФАЙЛА">
  */
 
-/* Максимально высокая специфичность для переопределения Tilda глобальных стилей */
+/* Используем максимально специфичные селекторы ТОЛЬКО для футера */
+/* Эти селекторы не должны влиять на другие элементы страницы */
 
-/* Default link color */
-.col-2 a {
+/* Default link color - только для футера */
+#allrecords .footer .col-2 a[data-v-0d46ed0a] {
   color: #252525 !important;
-  text-decoration: none !important;
-}
-
-.col-2 a[data-v-0d46ed0a] {
-  color: #252525 !important;
-  text-decoration: none !important;
-}
-
-#allrecords .col-2 a {
-  color: #252525 !important;
-  text-decoration: none !important;
-}
-
-#allrecords #rec .col-2 a {
-  color: #252525 !important;
-  text-decoration: none !important;
 }
 
 /* Hover state */
-.col-2 a:hover {
-  color: #f5df4d !important;
-}
-
-.col-2 a[data-v-0d46ed0a]:hover {
-  color: #f5df4d !important;
-}
-
-#allrecords .col-2 a:hover {
-  color: #f5df4d !important;
-}
-
-#allrecords #rec .col-2 a:hover {
+#allrecords .footer .col-2 a[data-v-0d46ed0a]:hover {
   color: #f5df4d !important;
 }
 
 /* Active state */
-.col-2 a:active {
+#allrecords .footer .col-2 a[data-v-0d46ed0a]:active {
   color: rgba(245, 223, 77, 0.5) !important;
 }
 
-.col-2 a[data-v-0d46ed0a]:active {
-  color: rgba(245, 223, 77, 0.5) !important;
+/* Альтернативный селектор без data-v атрибута (на случай если Vue изменит хеш) */
+#allrecords .footer-content .col-2 a {
+  color: #252525 !important;
 }
 
-#allrecords .col-2 a:active {
-  color: rgba(245, 223, 77, 0.5) !important;
+#allrecords .footer-content .col-2 a:hover {
+  color: #f5df4d !important;
 }
 
-#allrecords #rec .col-2 a:active {
+#allrecords .footer-content .col-2 a:active {
   color: rgba(245, 223, 77, 0.5) !important;
-}
-
-/* Mobile devices */
-@media (max-width: 767.98px) {
-  .col-2 a:hover {
-    color: #f5df4d !important;
-  }
-
-  .col-2 a[data-v-0d46ed0a]:hover {
-    color: #f5df4d !important;
-  }
-
-  #allrecords .col-2 a:hover {
-    color: #f5df4d !important;
-  }
-
-  #allrecords #rec .col-2 a:hover {
-    color: #f5df4d !important;
-  }
 }
