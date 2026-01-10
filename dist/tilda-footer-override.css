@@ -1,6 +1,6 @@
 /*
- * Tilda Footer Links Override
- * Специальный CSS для переопределения ТОЛЬКО цвета ссылок в футере
+ * Tilda Custom Styles Override
+ * Переопределение стилей для футера, хедера и контактов
  *
  * ИНСТРУКЦИЯ ПО УСТАНОВКЕ:
  * 1. Загрузите этот файл в Tilda: Настройки сайта -> Еще -> Библиотека файлов
@@ -9,8 +9,9 @@
  *    <link rel="stylesheet" href="ВАШ_URL_ФАЙЛА">
  */
 
-/* Используем максимально специфичные селекторы ТОЛЬКО для футера */
-/* Эти селекторы не должны влиять на другие элементы страницы */
+/* ========================================
+   ФУТЕР - Ссылки на правила игры и т.д.
+   ======================================== */
 
 /* Default link color - только для футера */
 #allrecords .footer .col-2 a[data-v-0d46ed0a] {
@@ -27,7 +28,7 @@
   color: rgba(245, 223, 77, 0.5) !important;
 }
 
-/* Альтернативный селектор без data-v атрибута (на случай если Vue изменит хеш) */
+/* Альтернативный селектор без data-v атрибута */
 #allrecords .footer-content .col-2 a {
   color: #252525 !important;
 }
@@ -38,4 +39,43 @@
 
 #allrecords .footer-content .col-2 a:active {
   color: rgba(245, 223, 77, 0.5) !important;
+}
+
+/* ========================================
+   ФУТЕР - Надпись "МАРБЛС"
+   ======================================== */
+
+#allrecords .footer .col-1 a[data-v-0d46ed0a],
+#allrecords .footer-content .col-1 a {
+  color: #939597 !important;
+}
+
+/* ========================================
+   ХЕДЕР - Кнопка "Заказать"
+   ======================================== */
+
+#allrecords .header .btn[data-v-48cbdc8d],
+#allrecords .header-content .btn {
+  color: #252525 !important;
+}
+
+#allrecords .header .btn[data-v-48cbdc8d]:hover,
+#allrecords .header-content .btn:hover {
+  color: #ffffff !important;
+}
+
+/* ========================================
+   КОНТАКТЫ - @nikolayr и help@marbls.ru
+   ======================================== */
+
+/* Telegram - @nikolayr */
+#allrecords a.tg[data-v-0f6a1cdf] span,
+#allrecords a.tg span {
+  color: #40b3e0 !important;
+}
+
+/* Email - help@marbls.ru */
+#allrecords a.email[data-v-0f6a1cdf] span,
+#allrecords a.email span {
+  color: #840707 !important;
 }
