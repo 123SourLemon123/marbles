@@ -165,6 +165,10 @@ export default defineComponent({
 
       &:hover {
         color: #f5df4d !important;
+
+        @include media-breakpoint-down(md) {
+          color: #f5df4d !important;
+        }
       }
 
       &:active {
