@@ -74,8 +74,18 @@
   color: #40b3e0 !important;
 }
 
+#allrecords a.tg[data-v-0f6a1cdf]:hover span,
+#allrecords a.tg:hover span {
+  color: #ffffff !important;
+}
+
 /* Email - help@marbls.ru */
 #allrecords a.email[data-v-0f6a1cdf] span,
 #allrecords a.email span {
   color: #840707 !important;
+}
+
+#allrecords a.email[data-v-0f6a1cdf]:hover span,
+#allrecords a.email:hover span {
+  color: #ffffff !important;
 }
